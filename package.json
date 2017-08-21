@@ -1,0 +1,29 @@
+{
+  "name": "bs-koa",
+  "version": "0.1.0",
+  "description": "Koajs bindings in Reason",
+  "main": "index.js",
+  "dependencies": {
+    "koa": "^2.3.0"
+  },
+  "devDependencies": {
+    "bs-platform": "^1.8.2"
+  },
+  "scripts": {
+    "build": "bsb -clean-world && bsb -make-world",
+    "start": "npm run-script build && node lib/js/example/",
+    "clean-build": "bsb -clean-world",
+    "test": "cd tests && ./test.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zaaack/koa.git"
+  },
+  "keywords": [],
+  "author": "Zack Young <zaaack@qq.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zaaack/koa/issues"
+  },
+  "homepage": "https://github.com/zaaack/koa#readme"
+}
