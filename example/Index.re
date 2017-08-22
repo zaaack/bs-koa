@@ -7,6 +7,12 @@ App.use
   (
     fun ctx next => {
       let v = Request.get ctx##request "aa";
+      let lastModified = Response.last_modified ctx##response;
+      switch lastModified {
+      | Some d => Js.log (Js.Date.toLocaleString d)
+      | None => Js.log "none"
+      };
+      Js.log2 "lastModified" lastModified;
       next ()
     }
   );
